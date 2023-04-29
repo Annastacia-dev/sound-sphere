@@ -1,12 +1,8 @@
 function App() {
-  let name: string
-
-  name = 'John Doe'
-
   return (
-    <>
-      <h1>Hello, {name}!</h1>
-    </>
+    <div>
+      <h1 className="text-green-500">Hello</h1>
+    </div>
   )
 }
 
