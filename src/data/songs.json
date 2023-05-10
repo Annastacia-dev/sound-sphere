@@ -1,0 +1,114 @@
+[
+  {
+    "id":1,
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "album": "A Night at the Opera",
+    "image": "https://example.com/images/bohemian-rhapsody.jpg"
+  },
+  {
+    "id":2,
+    "title": "Stairway to Heaven",
+    "artist": "Led Zeppelin",
+    "album": "Led Zeppelin IV",
+    "image": "https://example.com/images/stairway-to-heaven.jpg"
+  },
+  {
+    "id":3,
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "album": "Hotel California",
+    "image": "https://example.com/images/hotel-california.jpg"
+  },
+  {
+    "id":4,
+    "title": "Yesterday",
+    "artist": "The Beatles",
+    "album": "Help!",
+    "image": "https://example.com/images/yesterday.jpg"
+  },
+  {
+    "id":5,
+    "title": "Like a Rolling Stone",
+    "artist": "Bob Dylan",
+    "album": "Highway 61 Revisited",
+    "image": "https://example.com/images/like-a-rolling-stone.jpg"
+  },
+  {
+    "id":6,
+    "title": "Purple Haze",
+    "artist": "Jimi Hendrix",
+    "album": "Are You Experienced",
+    "image": "https://example.com/images/purple-haze.jpg"
+  },
+  {
+    "id":7,
+    "title": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "album": "Nevermind",
+    "image": "https://example.com/images/smells-like-teen-spirit.jpg"
+  },
+  {
+    "id":8,
+    "title": "Imagine",
+    "artist": "John Lennon",
+    "album": "Imagine",
+    "image": "https://example.com/images/imagine.jpg"
+  },
+  {
+    "id":9,
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "album": "Thriller",
+    "image": "https://example.com/images/thriller.jpg"
+  },
+  {
+    "id":10,
+    "title": "Billie Jean",
+    "artist": "Michael Jackson",
+    "album": "Thriller",
+    "image": "https://example.com/images/billie-jean.jpg"
+  },
+  {
+    "id":11,
+    "title": "Another Brick in the Wall",
+    "artist": "Pink Floyd",
+    "album": "The Wall",
+    "image": "https://example.com/images/another-brick-in-the-wall.jpg"
+  },
+  {
+    "id":12,
+    "title": "Hey Jude",
+    "artist": "The Beatles",
+    "album": "The Beatles",
+    "image": "https://example.com/images/hey-jude.jpg"
+  },
+  {
+    "id":13,
+    "title": "Livin' on a Prayer",
+    "artist": "Bon Jovi",
+    "album": "Slippery When Wet",
+    "image": "https://example.com/images/livin-on-a-prayer.jpg"
+  },
+  {
+    "id":14,
+    "title": "Sweet Child o' Mine",
+    "artist": "Guns N' Roses",
+    "album": "Appetite for Destruction",
+    "image": "https://example.com/images/sweet-child-o-mine.jpg"
+  },
+  {
+    "id":15,
+    "title": "Smooth",
+    "artist": "Santana",
+    "album": "Supernatural",
+    "image": "https://example.com/images/smooth.jpg"
+  },
+  {
+    "id":16,
+    "title": "Wonderwall",
+    "artist": "Oasis",
+    "album": "(What's the Story) Morning Glory?",
+    "image": "https://example.com/images/wonderwall.jpg"
+  }
+]
