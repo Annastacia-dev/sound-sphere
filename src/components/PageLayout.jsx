@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageLayout = () => {
   return (
-    <div>
+    <div className="h-screen flex justify-center items-center">
       PageLayout
     </div>
   )
