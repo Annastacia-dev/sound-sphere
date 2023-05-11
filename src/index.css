@@ -6,4 +6,7 @@
     scroll-behavior: smooth;
     @apply font-rubik
   }
+  body {
+    @apply bg-gray-100
+  }
 }
