@@ -1,7 +1,12 @@
+import MainComponentLayout from "./components/MainComponentLayout"
+import PageLayout from "./components/PageLayout"
+
 function App() {
   return (
     <div>
-      <h1 className="text-green-500">Hello</h1>
+      <MainComponentLayout>
+        <PageLayout />
+      </MainComponentLayout>
     </div>
   )
 }
