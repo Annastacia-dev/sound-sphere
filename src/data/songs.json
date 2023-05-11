@@ -4,111 +4,127 @@
     "title": "Bohemian Rhapsody",
     "artist": "Queen",
     "album": "A Night at the Opera",
-    "image": "https://example.com/images/bohemian-rhapsody.jpg"
+    "image": "https://i.pinimg.com/236x/4f/2c/41/4f2c41029a37e538ccb33b8f532ca568.jpg",
+    "audio": "/audio/bohemian-rhapsody.mp3"
   },
   {
     "id":2,
     "title": "Stairway to Heaven",
     "artist": "Led Zeppelin",
     "album": "Led Zeppelin IV",
-    "image": "https://example.com/images/stairway-to-heaven.jpg"
+    "image": "https://i.pinimg.com/236x/a3/e1/4b/a3e14bb08717a9603b7cae845a6bd040.jpg",
+    "audio": "/audio/stairway-to-heaven.mp3"
   },
   {
     "id":3,
     "title": "Hotel California",
     "artist": "Eagles",
     "album": "Hotel California",
-    "image": "https://example.com/images/hotel-california.jpg"
+    "image": "https://i.pinimg.com/236x/a8/bc/d8/a8bcd83c618be4c2b08ccff5eccabcb1.jpg",
+    "audio": "/audio/hotel-california.mp3"
   },
   {
     "id":4,
     "title": "Yesterday",
     "artist": "The Beatles",
     "album": "Help!",
-    "image": "https://example.com/images/yesterday.jpg"
+    "image": "https://i.pinimg.com/236x/d0/a1/5f/d0a15ff1caefe025565402679a8e4827.jpg",
+    "audio": "/audio/yesterday.mp3"
   },
   {
     "id":5,
     "title": "Like a Rolling Stone",
     "artist": "Bob Dylan",
     "album": "Highway 61 Revisited",
-    "image": "https://example.com/images/like-a-rolling-stone.jpg"
+    "image": "https://i.pinimg.com/236x/d4/c4/29/d4c429a9272a231298133b6c6e0eb7b9.jpg",
+    "audio": "/audio/like-a-rolling-stone.mp3"
   },
   {
     "id":6,
     "title": "Purple Haze",
     "artist": "Jimi Hendrix",
     "album": "Are You Experienced",
-    "image": "https://example.com/images/purple-haze.jpg"
+    "image": "https://i.pinimg.com/236x/c2/8f/e2/c28fe265ab033fd09fa352e9547515c1.jpg",
+    "audio": "/audio/purple-haze.mp3"
   },
   {
     "id":7,
     "title": "Smells Like Teen Spirit",
     "artist": "Nirvana",
     "album": "Nevermind",
-    "image": "https://example.com/images/smells-like-teen-spirit.jpg"
+    "image": "https://i.pinimg.com/236x/2c/b8/fc/2cb8fced7ed439a7870b7f1fcf9d7c99.jpg",
+    "audio":"/audio/smells-like-teen-spirit.mp3"
   },
   {
     "id":8,
     "title": "Imagine",
     "artist": "John Lennon",
     "album": "Imagine",
-    "image": "https://example.com/images/imagine.jpg"
+    "image": "https://i.pinimg.com/236x/06/97/1c/06971c7bb193168bfbd7a6381022e76c.jpg",
+    "audio": "/audio/imagine.mp3"
   },
   {
     "id":9,
     "title": "Thriller",
     "artist": "Michael Jackson",
     "album": "Thriller",
-    "image": "https://example.com/images/thriller.jpg"
+    "image": "https://i.pinimg.com/236x/19/93/b6/1993b6b73c8e2ee4d270841ca68fb5a8.jpg",
+    "audio": "/audio/thriller.mp3"
   },
   {
     "id":10,
     "title": "Billie Jean",
     "artist": "Michael Jackson",
     "album": "Thriller",
-    "image": "https://example.com/images/billie-jean.jpg"
+    "image": "https://i.pinimg.com/236x/19/93/b6/1993b6b73c8e2ee4d270841ca68fb5a8.jpg",
+    "audio": "/audio/billie-jean.mp3"
   },
   {
     "id":11,
     "title": "Another Brick in the Wall",
     "artist": "Pink Floyd",
     "album": "The Wall",
-    "image": "https://example.com/images/another-brick-in-the-wall.jpg"
+    "image": "https://i.pinimg.com/236x/80/37/30/803730f1c8dedebfb1822dc95f1c1532.jpg",
+    "audio": "/audio/another-brick-in-the-wall.mp3"
   },
   {
     "id":12,
     "title": "Hey Jude",
     "artist": "The Beatles",
     "album": "The Beatles",
-    "image": "https://example.com/images/hey-jude.jpg"
+    "image": "https://i.pinimg.com/236x/e5/1d/e1/e51de1d90b8ab145079a41fac4fa919b.jpg",
+    "audio": "/audio/hey-jude.mp3"
   },
   {
     "id":13,
     "title": "Livin' on a Prayer",
     "artist": "Bon Jovi",
     "album": "Slippery When Wet",
-    "image": "https://example.com/images/livin-on-a-prayer.jpg"
+    "image": "https://i.pinimg.com/236x/2c/76/ef/2c76ef54d6424ac3c139ad0d643880e5.jpg",
+    "audio": "/audio/livin-on-a-prayer.mp3"
   },
   {
     "id":14,
     "title": "Sweet Child o' Mine",
     "artist": "Guns N' Roses",
     "album": "Appetite for Destruction",
-    "image": "https://example.com/images/sweet-child-o-mine.jpg"
+    "image": "https://i.pinimg.com/236x/ee/75/8b/ee758bb793bfb14098a4ae7f60a11d07.jpg",
+    "audio": "/audio/sweet-child-o-mine.mp3"
   },
   {
     "id":15,
     "title": "Smooth",
     "artist": "Santana",
     "album": "Supernatural",
-    "image": "https://example.com/images/smooth.jpg"
+    "image": "https://i.pinimg.com/236x/99/ce/be/99cebecbca6ebfa1ff6f63900bffee15.jpg",
+    "audio": "/audio/smooth.mp3"
   },
   {
     "id":16,
     "title": "Wonderwall",
     "artist": "Oasis",
     "album": "(What's the Story) Morning Glory?",
-    "image": "https://example.com/images/wonderwall.jpg"
+    "image": "https://i.pinimg.com/236x/8e/59/dd/8e59dd3d0ad885ca4eb9a53a9bdb1863.jpg",
+    "audio": "/audio/wonderwall.mp3"
   }
 ]
