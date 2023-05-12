@@ -36,14 +36,6 @@ const AudioPlayer = ({ src }) => {
               <div
                 className="sm:w-80 w-48 h-1 bg-gray-300 outline-none appearance-none
                 cursor-pointer"
-                onMouseEnter={(e) => {
-                  const childNode = e.target.childNodes[1];
-                  childNode.classList.remove("hidden");
-                }}
-                onMouseLeave={(e) => {
-                  const childNode = e.target.childNodes[1];
-                  childNode.classList.add("hidden");
-                }}
               >
                 <div
                   className="h-1 bg-black"
@@ -54,7 +46,7 @@ const AudioPlayer = ({ src }) => {
                   value={currentTime}
                   onChange={handleTimeChange}
                   className="w-full h-full outline-none appearance-none
-                  cursor-pointer bg-transparent absolute top-0.5 hidden"
+                  cursor-pointer bg-transparent absolute top-0.5"
                   style={{ background: "transparent" }}
                   max={duration}
                 />

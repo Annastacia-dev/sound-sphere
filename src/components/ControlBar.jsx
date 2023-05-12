@@ -15,10 +15,20 @@ const ControlBar = () => {
     currentSong,
     isPlaying,
     setIsPlaying,
+    mode,
+    setMode,
+    shuffledSongs,
+    toggleShuffle,
    } = useContext(PlayerContext);
 
   return (
     <div className="flex items-center absolute gap-4 sm:bottom-16 bottom-24">
+      <MdOutlineShuffle
+        className={`${
+          mode === "shuffle" ? "border-black border" : "text-black"
+        } text-2xl cursor-pointer`}
+        onClick={toggleShuffle}
+      />
       <TbPlayerTrackPrevFilled
         className="text-2xl text-black cursor-pointer"
         onClick={previousSong}
@@ -38,6 +48,7 @@ const ControlBar = () => {
         className="text-2xl text-black cursor-pointer"
         onClick={nextSong}
       />
+
     </div>
   )
 }

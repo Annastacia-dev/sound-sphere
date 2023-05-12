@@ -12,8 +12,46 @@ export const PlayerProvider = ({ children }) => {
   const [remainingTime, setRemainingTime] = useState(0);
   const audioRef = useRef();
   const [progress, setProgress] = useState(0);
+  const [mode, setMode] = useState("none");
+  const [shuffledSongs, setShuffledSongs] = useState([]);
 
   const currentSong = songs[currentSongIndex];
+
+  useEffect(() => {
+    if (mode === "shuffle") {
+      const shuffledSongs = [...songs].sort(() => Math.random() - 0.5);
+      setShuffledSongs(shuffledSongs);
+    } else if (mode === "repeat") {
+      setShuffledSongs(songs);
+    } else if (mode === "repeat-one") {
+      setShuffledSongs([currentSong]);
+    } else {
+      setShuffledSongs([]);
+    }
+  }, [mode]);
+
+  const toggleShuffle = () => {
+    if (mode === "shuffle") {
+      setMode("none");
+    } else {
+      setMode("shuffle");
+    }
+  };
+
+
+  useEffect(() => {
+    if (shuffledSongs.length) {
+      const newIndex = shuffledSongs.findIndex((song) => song.id === currentSong.id);
+      setCurrentSongIndex(newIndex);
+    }
+  }, [shuffledSongs]);
+
+  useEffect(() => {
+    audioRef.current.addEventListener('ended', nextSong);
+    return () => {
+      audioRef.current.removeEventListener('ended', nextSong);
+    }
+  }, [currentSongIndex]);
 
   const previousSong = () => {
     const newIndex = (currentSongIndex - 1 + songs.length) % songs.length;
@@ -27,25 +65,22 @@ export const PlayerProvider = ({ children }) => {
   };
 
   const nextSong = () => {
-    const newIndex = (currentSongIndex + 1) % songs.length;
-    setCurrentSongIndex(newIndex);
-    audioRef.current.src = songs[newIndex].audio;
-    audioRef.current.load()
-    audioRef.current.addEventListener('canplaythrough', () => {
-      audioRef.current.play();
-      setIsPlaying(true);
-    });
-  };
-
-  // auto play next song when current song ends
-  useEffect(() => {
-    audioRef.current.addEventListener('ended', nextSong);
-    return () => {
-      audioRef.current.removeEventListener('ended', nextSong);
+    let newIndex;
+    if (mode === "none") {
+      newIndex = (currentSongIndex + 1) % songs.length;
+    } else {
+      const currentIndex = shuffledSongs.indexOf(currentSong);
+      if (currentIndex === -1 || currentIndex === shuffledSongs.length - 1) {
+        newIndex = 0;
+      } else {
+        newIndex = currentIndex + 1;
+      }
     }
-  }, [currentSongIndex]);
-
-  
+    setCurrentSongIndex(newIndex);
+    audioRef.current.src = mode === "none" ? songs[newIndex].audio : shuffledSongs[newIndex].audio;
+    audioRef.current.play();
+    setIsPlaying(true);
+  };
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -99,6 +134,10 @@ export const PlayerProvider = ({ children }) => {
         handleTimeChange,
         handleLoadedMetadata,
         handleTimeUpdate,
+        mode,
+        setMode,
+        shuffledSongs,
+        toggleShuffle,
       }}
     >
       {children}
