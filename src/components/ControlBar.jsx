@@ -13,7 +13,7 @@ const ControlBar = () => {
    } = useContext(PlayerContext);
 
   return (
-    <div className="flex items-center absolute gap-4 sm:bottom-16 bottom-24">
+    <div className="flex items-center absolute gap-4 sm:bottom-16 bottom-12">
       <TbPlayerTrackPrevFilled
         className="text-2xl text-black cursor-pointer"
         onClick={previousSong}
