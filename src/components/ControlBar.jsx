@@ -1,7 +1,4 @@
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
-import { BsArrowRepeat } from "react-icons/bs";
-import { FiShare } from "react-icons/fi";
-import { MdOutlineShuffle } from "react-icons/md";
 import { TbPlayerTrackNextFilled, TbPlayerTrackPrevFilled } from "react-icons/tb";
 import { PlayerContext } from "../contexts/PlayerProvider";
 import { useContext } from "react";
@@ -12,23 +9,11 @@ const ControlBar = () => {
     previousSong,
     nextSong,
     togglePlay,
-    currentSong,
     isPlaying,
-    setIsPlaying,
-    mode,
-    setMode,
-    shuffledSongs,
-    toggleShuffle,
    } = useContext(PlayerContext);
 
   return (
     <div className="flex items-center absolute gap-4 sm:bottom-16 bottom-24">
-      <MdOutlineShuffle
-        className={`${
-          mode === "shuffle" ? "border-black border" : "text-black"
-        } text-2xl cursor-pointer`}
-        onClick={toggleShuffle}
-      />
       <TbPlayerTrackPrevFilled
         className="text-2xl text-black cursor-pointer"
         onClick={previousSong}
@@ -48,7 +33,6 @@ const ControlBar = () => {
         className="text-2xl text-black cursor-pointer"
         onClick={nextSong}
       />
-
     </div>
   )
 }
