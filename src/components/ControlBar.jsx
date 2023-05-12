@@ -18,19 +18,19 @@ const ControlBar = () => {
    } = useContext(PlayerContext);
 
   return (
-    <div className="flex items-center absolute gap-4 bottom-12">
+    <div className="flex items-center absolute gap-4 sm:bottom-16 bottom-24">
       <TbPlayerTrackPrevFilled
         className="text-2xl text-black cursor-pointer"
         onClick={previousSong}
       />
       {isPlaying ? (
         <AiFillPauseCircle
-          className="text-2xl text-black cursor-pointer"
+          className="text-4xl text-black cursor-pointer"
           onClick={togglePlay}
         />
       ) : (
         <AiFillPlayCircle
-          className="text-2xl text-black cursor-pointer"
+          className="text-4xl text-black cursor-pointer"
           onClick={togglePlay}
         />
       )}

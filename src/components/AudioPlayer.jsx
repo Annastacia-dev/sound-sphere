@@ -34,7 +34,7 @@ const AudioPlayer = ({ src }) => {
           <div className="flex items-center relative">
             <span className="absolute text-xs top-4 font-rubik">{formatTime(currentTime)}</span>
               <div
-                className="w-80 h-1 bg-gray-300 outline-none appearance-none
+                className="sm:w-80 w-48 h-1 bg-gray-300 outline-none appearance-none
                 cursor-pointer"
                 onMouseEnter={(e) => {
                   const childNode = e.target.childNodes[1];
@@ -60,7 +60,7 @@ const AudioPlayer = ({ src }) => {
                 />
               </div>
             <span className="absolute text-xs top-4 right-1 font-rubik">
-              {formatTime(remainingTime)}
+              {formatTime(isNaN(remainingTime) ? 0 : remainingTime)}
             </span>
           </div>
           <ControlBar />

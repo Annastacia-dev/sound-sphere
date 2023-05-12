@@ -3,11 +3,9 @@ import PageLayout from "./components/PageLayout"
 
 function App() {
   return (
-    <div>
-      <MainComponentLayout>
-        <PageLayout />
-      </MainComponentLayout>
-    </div>
+    <MainComponentLayout>
+      <PageLayout />
+    </MainComponentLayout>
   )
 }
 

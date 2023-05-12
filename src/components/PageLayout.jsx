@@ -1,9 +1,9 @@
-import SongsPlayer from "./SongsPlayer"
+import Songs from "./Songs"
 
 const PageLayout = () => {
   return (
     <div className="h-screen flex justify-center items-center">
-      <SongsPlayer />
+      <Songs />
     </div>
   )
 }

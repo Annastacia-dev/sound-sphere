@@ -1,4 +1,4 @@
-import { createContext, useState, useRef } from "react";
+import { createContext, useState, useRef, useEffect } from "react";
 import songs from '../data/songs.json'
 import useInterval from "../utils/useInterval";
 
@@ -16,12 +16,36 @@ export const PlayerProvider = ({ children }) => {
   const currentSong = songs[currentSongIndex];
 
   const previousSong = () => {
-    setCurrentSongIndex((currentSongIndex - 1 + songs.length) % songs.length);
+    const newIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    setCurrentSongIndex(newIndex);
+    audioRef.current.src = songs[newIndex].audio;
+    audioRef.current.load()
+    audioRef.current.addEventListener('canplaythrough', () => {
+      audioRef.current.play();
+      setIsPlaying(true);
+    });
   };
 
   const nextSong = () => {
-    setCurrentSongIndex((currentSongIndex + 1) % songs.length);
+    const newIndex = (currentSongIndex + 1) % songs.length;
+    setCurrentSongIndex(newIndex);
+    audioRef.current.src = songs[newIndex].audio;
+    audioRef.current.load()
+    audioRef.current.addEventListener('canplaythrough', () => {
+      audioRef.current.play();
+      setIsPlaying(true);
+    });
   };
+
+  // auto play next song when current song ends
+  useEffect(() => {
+    audioRef.current.addEventListener('ended', nextSong);
+    return () => {
+      audioRef.current.removeEventListener('ended', nextSong);
+    }
+  }, [currentSongIndex]);
+
+  
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -39,7 +63,7 @@ export const PlayerProvider = ({ children }) => {
   };
 
   const handleLoadedMetadata = () => {
-    setDuration(audioRef.current.duration);
+    setDuration(audioRef.current.duration || 0);
   };
 
   const handleTimeUpdate = () => {
@@ -51,7 +75,6 @@ export const PlayerProvider = ({ children }) => {
   useInterval(() => {
     setCurrentTime(audioRef.current.currentTime);
   }, 10);
-
 
   return (
     <PlayerContext.Provider

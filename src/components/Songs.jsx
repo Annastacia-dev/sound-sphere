@@ -5,11 +5,11 @@ import { PlayerContext } from '../contexts/PlayerProvider'
 import { useContext } from 'react'
 
 const Songs = () => {
-  const { currentSongIndex, currentSong } = useContext(PlayerContext)
+  const { currentSong } = useContext(PlayerContext)
 
   return (
     <div className="flex justify-center items-center">
-      <div className=" bg-white sm:w-[45rem] sm:absolute h-44 rounded-md shadow-lg">
+      <div className="bg-white sm:w-[45rem] w-60 sm:absolute sm:h-44 h-96 sm:mt-0 -mt-16 rounded-md shadow-lg">
         <Song song={currentSong} />
       </div>
     </div>
